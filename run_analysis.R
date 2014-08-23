@@ -1,6 +1,6 @@
-# requires all data in directory "UCI HAR Dataset" (under current directory)
+# requires all data in subdirectory "UCI HAR Dataset" (under current directory)
 
-# read in all nessicary files:
+# read in all necessary files:
 path <- "UCI HAR Dataset\\"
 fname <- paste0(path, "activity_labels.txt")
 activities <- read.table(fname)
@@ -26,6 +26,8 @@ X_train <- read.table(fname)
 fname <- paste0(path, "train\\y_train.txt")
 y_train <- as.vector(read.table(fname)[[1]])
 
+
+
 # combine test and train sets (test is first, then train)
 subject <- c(subject_test,subject_train)
 y <- c(y_test, y_train) 
@@ -48,14 +50,13 @@ remove(subject_test,subject_train,y_test,y_train,X_test,X_train,features,y,subje
 # All data now in X starting with column "subject"
 # , then "activityCode", "activity", "tBodyAcc-mean()-X", ..., "angle(Z,gravityMean)"
 
-# Keep only columns of mean or std. deviation (except for subject, activity and activityCode which are kept)
+# Keep only columns of mean or std. deviation (except for columns subject, activity and activityCode which are kept)
 # regex: all strings that contains mean (not followed by F to exclude meanFreq) or std
 X<-X[,c(1,2,3,grep("mean[^F]|std",colnames(X)))]
 
-# Compute mean for every column of X, except for subject, act.Code and activity,
-# group by subject, activityCode and activity
+# Compute mean for every column of X (except for subject, act.Code and activity),
+# grouped by subject and activityCode / activity.
 tidyData <- aggregate(as.matrix(X[4:69])~subject+activityCode+activity,data=X,FUN="mean")
-
 
 # fix column header names:
 n<-names(tidyData)[4:dim(tidyData)[2]]
@@ -70,15 +71,25 @@ capitalize <- function(x) {
         sep="", collapse=" ")
 }
 
+# set headers and activitycolumn to camelCase notation
 n<-as.vector(sapply(n,capitalize))
 n<-gsub(" ", "_", n)
+substring(n,1,1)<-tolower(substring(n,1,1))
+n<-gsub("_", "", n)
 names(tidyData)[4:dim(tidyData)[2]]<-n
 
+an<-tidyData[,3]
+an<-gsub("_", " ", an)
+an<-as.vector(sapply(tolower(an),capitalize))
+substring(an,1,1)<-tolower(substring(an,1,1))
+an<-gsub(" ", "", an)
+tidyData[,3]<-an
 
 # sort table by subject and activityCode
 tidyData <- tidyData[order(tidyData[1],tidyData[2]),]
 rownames(tidyData) <- NULL
 tidyData[2]<-NULL
-write.table(tidyData, "tidyData.txt") 
+write.table(tidyData, "tidyData.txt", row.name=FALSE)
+
 
 
