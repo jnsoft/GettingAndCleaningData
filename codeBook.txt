@@ -1,0 +1,79 @@
+Feature Selection 
+=================
+
+The features selected for this data set are average mean and average standard deviation 
+of 3-axial signals from an accelerometer and gyroscope, measuring defferent activiteis for the subjects.
+
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions
+
+
+
+subject (num): a number 1-30 indicating which subject was measured
+activity (chr): describes the activity measured
+bodyAccMeanX (num): calculated value for suvject and activity    
+bodyAccMeanY (num):  calculated value for suvject and activity    
+bodyAccMeanZ (num):  calculated value for suvject and activity    
+bodyAccStdX  (num): calculated value for suvject and activity    
+bodyAccStdY  (num): calculated value for suvject and activity    
+bodyAccStdZ  (num): calculated value for suvject and activity    
+gravityAccMeanX (num): calculated value for suvject and activity    
+gravityAccMeanY (num): calculated value for suvject and activity    
+gravityAccMeanZ (num): calculated value for suvject and activity    
+gravityAccStdX  (num): calculated value for suvject and activity    
+gravityAccStdY  (num): calculated value for suvject and activity    
+gravityAccStdZ   (num): calculated value for suvject and activity    
+bodyAccJerkMeanX  (num): calculated value for suvject and activity    
+bodyAccJerkMeanY  (num): calculated value for suvject and activity    
+bodyAccJerkMeanZ  (num):calculated value for suvject and activity    
+bodyAccJerkStdX  (num): calculated value for suvject and activity    
+bodyAccJerkStdY  (num): calculated value for suvject and activity    
+bodyAccJerkStdZ  (num): calculated value for suvject and activity    
+bodyGyroMeanX  (num): calculated value for suvject and activity    
+bodyGyroMeanY   (num): calculated value for suvject and activity    
+bodyGyroMeanZ  (num): calculated value for suvject and activity    
+bodyGyroStdX   (num): calculated value for suvject and activity    
+bodyGyroStdY   (num): calculated value for suvject and activity    
+bodyGyroStdZ   (num): calculated value for suvject and activity    
+bodyGyroJerkMeanX  (num): calculated value for suvject and activity    
+bodyGyroJerkMeanY (num): calculated value for suvject and activity    
+bodyGyroJerkMeanZ (num): calculated value for suvject and activity    
+bodyGyroJerkStdX  (num): calculated value for suvject and activity        
+bodyGyroJerkStdY  (num): calculated value for suvject and activity       
+bodyGyroJerkStdZ (num): calculated value for suvject and activity        
+bodyAccMagMean   (num): calculated value for suvject and activity        
+bodyAccMagStd   (num): calculated value for suvject and activity          
+gravityAccMagMean (num): calculated value for suvject and activity         
+gravityAccMagStd  (num): calculated value for suvject and activity        
+bodyAccJerkMagMean (num): calculated value for suvject and activity        
+bodyAccJerkMagStd  (num): calculated value for suvject and activity        
+bodyGyroMagMean    (num): calculated value for suvject and activity        
+bodyGyroMagStd    (num): calculated value for suvject and activity         
+bodyGyroJerkMagMean  (num):  calculated value for suvject and activity    
+bodyGyroJerkMagStd  (num): calculated value for suvject and activity      
+bodyAccMeanX     (num):  calculated value for suvject and activity        
+bodyAccMeanY   (num):  calculated value for suvject and activity           
+bodyAccMeanZ   (num):  calculated value for suvject and activity     
+bodyAccStdX   (num):  calculated value for suvject and activity           
+bodyAccStdY    (num):  calculated value for suvject and activity           
+bodyAccStdZ    (num):  calculated value for suvject and activity           
+bodyAccJerkMeanX   (num):  calculated value for suvject and activity       
+bodyAccJerkMeanY  (num):   calculated value for suvject and activity      
+bodyAccJerkMeanZ  (num):   calculated value for suvject and activity       
+bodyAccJerkStdX  (num):   calculated value for suvject and activity        
+bodyAccJerkStdY   (num):   calculated value for suvject and activity       
+bodyAccJerkStdZ   (num):   calculated value for suvject and activity       
+bodyGyroMeanX    (num):    calculated value for suvject and activity       
+bodyGyroMeanY     (num):    calculated value for suvject and activity      
+bodyGyroMeanZ   (num):      calculated value for suvject and activity      
+bodyGyroStdX    (num):   calculated value for suvject and activity        
+bodyGyroStdY    (num):    calculated value for suvject and activity       
+bodyGyroStdZ     (num):    calculated value for suvject and activity      
+bodyAccMagMean   (num):   calculated value for suvject and activity      
+bodyAccMagStd    (num):     calculated value for suvject and activity      
+bodyBodyAccJerkMagMean (num): calculated value for suvject and activity     
+bodyBodyAccJerkMagStd (num): calculated value for suvject and activity     
+bodyBodyGyroMagMean  (num):  calculated value for suvject and activity     
+bodyBodyGyroMagStd  (num):   calculated value for suvject and activity     
+bodyBodyGyroJerkMagMean (num): calculated value for suvject and activity     
+bodyBodyGyroJerkMagStd (num): calculated value for suvject and activity     
+
